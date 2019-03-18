@@ -12,7 +12,7 @@
   "dependencies": {
     "delay": "^4.1.0",
     "esm": "^3.2.4",
-    "mqtt-bridge-utils": "1.0.0",
+    "mqtt-bridge-utils": "^1.0.0",
     "p-forever": "^1.0.1",
     "suncalc": "^1.8.0"
   }
