@@ -1,0 +1,15 @@
+{
+  "name": "mqtt-bridges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Keith Cirkel (https://keithcirkel.co.uk/)",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.11.1"
+  }
+}

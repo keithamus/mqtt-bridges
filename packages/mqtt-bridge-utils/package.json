@@ -1,0 +1,14 @@
+{
+  "name": "mqtt-bridge-utils",
+  "version": "1.0.0",
+  "module": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith Cirkel (https://keithcirkel.co.uk/)",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^2.18.8"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "mqtt-bridge-tesla",
+  "version": "1.0.0",
+  "module": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith Cirkel (https://keithcirkel.co.uk/)",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "delay": "^4.1.0",
+    "esm": "^3.2.4",
+    "make-fetch-happen": "^4.0.1",
+    "mqtt-bridge-utils": "1.0.0",
+    "p-forever": "^1.0.1",
+    "p-retry": "^3.0.1",
+    "p-timeout": "^2.0.1",
+    "teslajs": "^4.2.4"
+  }
+}
