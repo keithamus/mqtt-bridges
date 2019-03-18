@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docker-publish": "lerna run docker-publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
