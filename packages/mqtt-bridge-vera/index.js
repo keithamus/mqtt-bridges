@@ -34,6 +34,10 @@ const commands = {
     on: () => `id=lu_action&serviceId=urn:upnp-org:serviceId:SwitchPower1&action=SetTarget&newTargetValue=1`,
     off: () => `id=lu_action&serviceId=urn:upnp-org:serviceId:SwitchPower1&action=SetTarget&newTargetValue=0`,
   },
+  '7'/* LOCK */: {
+    unlock: () => `id=lu_action&serviceId=urn:micasaverde-com:serviceId:DoorLock1&action=SetTarget&newTargetValue=0`,
+    lock: () => `id=lu_action&serviceId=urn:micasaverde-com:serviceId:DoorLock1&action=SetTarget&newTargetValue=1`,
+  },
   '8'/* WINDOW COVER */: {
     open: () => commands[8].level(100),
     close: () => command[8].level(0),
@@ -62,7 +66,7 @@ const main = async (config) => {
   const mqpub = await mqtt(config, async (id, command, payload) => {
     const device = deviceCache.get(id)
     if (device && commands[device.category] && commands[device.category][command]) {
-      await request(`DeviceNum=${id}&${commands[device.category][command](payload)}`)
+      await request(`DeviceNum=${id}&${commands[device.category][command](payload)}&rand=${Math.random()}`)
     }
     await refresh()
   })
