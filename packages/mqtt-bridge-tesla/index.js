@@ -14,6 +14,7 @@ const disallowedCommands = new Set([
 const commands = {
   default: () => [],
   scheduleSoftwareUpdate: ms => [Number(ms || 0)],
+  setSentryMode: onoff => [Boolean(onoff)],
   navigationRequest: ([subject, text, locale]) => [String(subject), String(text), String(locale)],
   speedLimitActivate: pin => [Number(pin || 1234)],
   speedLimitClearPin: pin => [Number(pin || 1234)],

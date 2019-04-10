@@ -21,6 +21,6 @@
     "p-forever": "^1.0.1",
     "p-retry": "^3.0.1",
     "p-timeout": "^2.0.1",
-    "teslajs": "^4.2.4"
+    "teslajs": "^4.3.5"
   }
 }
