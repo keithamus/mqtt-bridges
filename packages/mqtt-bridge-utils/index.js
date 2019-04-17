@@ -1,5 +1,4 @@
 import mqtt from 'mqtt'
-import {EventEmitter} from 'events'
 
 const repeatMessageCache = new Map()
 export default async ({ MQTT_HOST = 'localhost', MQTT_PORT = '8883', MQTT_USER, MQTT_PASS, MQTT_CLIENT_ID, MQTT_ROOT }, issueCommand) => {
