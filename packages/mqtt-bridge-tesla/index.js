@@ -1,9 +1,7 @@
 import mqtt from 'mqtt-bridge-utils'
 import tesla from 'teslajs'
 import delay from 'delay'
-import retry from 'p-retry'
 import forever from 'p-forever'
-
 
 const disallowedCommands = new Set([
   'login', 'refreshToken', 'get_command', 'post_command',
