@@ -24,7 +24,7 @@ const commands = {
   sunRoofMove: pc => [Number(pc)],
   setTemps: ([driver, passenger]) => [Number(driver || 20), Number(passenger || 20)],
   remoteStart: pass => [String(pass)],
-  openTrunk: which => [state === 'front' ? 'front' : 'rear'],
+  openTrunk: which => [which === 'front' ? 'front' : 'rear'],
   setValetMode: ([onoff, pin]) => [Boolean(onoff), Number(pin)],
   calendar: entry => [entry],
   homelink: ([lat, long, token]) => [Number(lat), Number(long), String(token)],
@@ -33,7 +33,7 @@ const commands = {
 const main = async (config) => {
   const {POLL_INTERVAL = 60, TESLA_EMAIL, TESLA_PASS} = config
   if (!TESLA_EMAIL || !TESLA_PASS) throw new Error(`Must provide TESLA_EMAIL and TESLA_PASSWORD environment variables`)
-  const {body, authToken, refreshToken} = await tesla.loginAsync(TESLA_EMAIL, TESLA_PASS)
+  const {authToken} = await tesla.loginAsync(TESLA_EMAIL, TESLA_PASS)
   const vehicleIDs = new Set()
   const refresh = async () => {
     const vehicles = await tesla.vehiclesAsync({ authToken })
