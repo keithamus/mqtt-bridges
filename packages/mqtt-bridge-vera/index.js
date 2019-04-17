@@ -40,7 +40,7 @@ const commands = {
   },
   '8'/* WINDOW COVER */: {
     open: () => commands[8].level(100),
-    close: () => command[8].level(0),
+    close: () => commands[8].level(0),
     stop: () => `id=action&serviceId=urn:upnp-org:serviceId:WindowCovering1&action=Stop`,
     level: i => `id=lu_action&serviceId=urn:upnp-org:serviceId:Dimming1&action=SetLoadLevelTarget&newLoadlevelTarget=${parseInt(i, 10)}`
   },
