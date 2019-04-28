@@ -47,11 +47,11 @@ export default async ({ MQTT_HOST = 'localhost', MQTT_PORT = '8883', MQTT_USER, 
       process.exit(1)
     }
   })
-  return (id, value) => {
+  return (id, value, opts = { retain: true }) => {
     const topic = `${MQTT_ROOT}/${id}`
     value = JSON.stringify(value)
     if (repeatMessageCache.get(topic) === value) return
     repeatMessageCache.set(topic, value)
-    mq.publish(topic, value, { retain: true })
+    mq.publish(topic, value, opts)
   }
 }
