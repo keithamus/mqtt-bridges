@@ -11,6 +11,11 @@ motion events. The bridge can also activate any of the relays on the device.
 This bridge does not require registering with any third party services. It uses
 the local network API to interact with the devices.
 
+This bridge does not provide any way to stream the video from Doorbird. That is
+possible via using the RTSP stream on the device itself. See the [manual][manual]
+for more.
+
+[manual]: https://www.doorbird.com/downloads/api_lan.pdf?rev=0.21
 [doorbird]: https://www.doorbird.com
 
 ## Setup
