@@ -38,6 +38,7 @@ to come still. Here's the list that exists in this repo:
 
 
  - [mqtt-bridge-darksky](./packages/mqtt-bridge-darksky) provides [DarkSky](https://darksky.net/) weather report data
+ - [mqtt-bridge-doorbird](./packages/mqtt-bridge-doorbird) integrates [Doorbird](https://www.doorbird.com) smart doorbells
  - [mqtt-bridge-flux](./packages/mqtt-bridge-flux) calculates colour temperature to automate light brightness, based on [f.lux](https://justgetflux.com)
  - [mqtt-bridge-lifx](./packages/mqtt-bridge-lifx) integrates [Lifx](https://www.lifx.com) light bulbs
  - [mqtt-bridge-scenes](./packages/mqtt-bridge-scenes) a simple way to manage "Scenes" or State Machines (like an Alarm System)
