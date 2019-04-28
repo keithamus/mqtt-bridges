@@ -49,7 +49,9 @@ export default async ({ MQTT_HOST = 'localhost', MQTT_PORT = '8883', MQTT_USER, 
   })
   return (id, value, opts = { retain: true }) => {
     const topic = `${MQTT_ROOT}/${id}`
-    value = JSON.stringify(value)
+    if (!(value instanceof Uint8Array)) {
+      value = JSON.stringify(value)
+    }
     if (repeatMessageCache.get(topic) === value) return
     repeatMessageCache.set(topic, value)
     mq.publish(topic, value, opts)
