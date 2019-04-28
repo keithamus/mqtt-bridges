@@ -26,7 +26,7 @@ const main = async (config) => {
       default:
         return
     }
-    scenes[scene] = reorder([mode].concat(scenes[scene]))
+    scenes[scene] = reorder(scenes[scene], mode)
     await writeFileAsync(SCENE_FILE, JSON.stringify(scenes, null, 2))
     mqpub(scene, mode)
   })
