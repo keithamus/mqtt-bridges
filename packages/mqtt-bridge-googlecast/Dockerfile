@@ -1,7 +1,6 @@
 FROM node:11-alpine
 WORKDIR /home/node
 USER node
-COPY index.js package.json package-lock.json ./
+COPY *.js *.json ./
 RUN npm i
-VOLUME /data
 ENTRYPOINT ["npm", "start"]
