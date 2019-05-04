@@ -8,7 +8,9 @@ follow your circadian rhythm. The bridge will output colour temperatures which
 start out quite "blue" and get progressively more "red" as the day heads
 towards night.
 
-This bridge does not require registering with any third party services.
+This bridge does not require registering with any third party services, does
+not require access to "cloud" services, and does not rely on other networked
+devices. It is fully standalone.
 
 ## Setup
 
