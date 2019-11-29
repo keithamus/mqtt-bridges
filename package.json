@@ -1,33 +1,52 @@
 {
-  "name": "mqtt-bridges",
+  "name": "mqttbridge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Keith Cirkel (https://keithcirkel.co.uk/)",
+  "main": "lib/cli.js",
   "scripts": {
-    "docker-publish": "lerna run docker-publish",
     "lint": "eslint . --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Keith Cirkel (https://keithcirkel.co.uk/)",
-  "license": "MIT",
   "eslintConfig": {
     "env": {
       "node": true,
       "es6": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "rules": {
-      "no-console": "off",
-      "no-unused-vars": ["error", { "vars": "all", "args": "none" }]
-    }
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser"
+  },
+  "dependencies": {
+    "async-mqtt": "^2.6.1",
+    "bonjour": "^3.5.0",
+    "event-iterator": "^2.0.0",
+    "kelvin-to-rgb": "^1.0.2",
+    "make-fetch-happen": "^8.0.9",
+    "mqtt": "^4.2.1",
+    "node-fetch": "^2.6.0",
+    "suncalc": "^1.8.0",
+    "velux-klf200-api": "^0.1.5"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "lerna": "^3.11.1"
+    "@types/bonjour": "^3.5.6",
+    "@types/node": "^14.6.3",
+    "@types/node-fetch": "^2.5.7",
+    "@types/retry": "^0.12.0",
+    "@types/ssri": "^7.1.0",
+    "@types/suncalc": "^1.8.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
+    "prettier": "^2.1.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
   }
 }
