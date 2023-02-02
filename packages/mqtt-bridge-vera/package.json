@@ -16,7 +16,7 @@
   "dependencies": {
     "delay": "^4.1.0",
     "esm": "^3.2.4",
-    "make-fetch-happen": "^4.0.1",
+    "make-fetch-happen": "^11.0.2",
     "mqtt-bridge-utils": "^1.0.0",
     "node-ssdp": "^4.0.0",
     "p-forever": "^1.0.1",
