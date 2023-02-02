@@ -15,7 +15,7 @@
   "description": "",
   "dependencies": {
     "esm": "^3.2.4",
-    "make-fetch-happen": "^4.0.1",
+    "make-fetch-happen": "^11.0.2",
     "mqtt-bridge-utils": "^1.0.0",
     "bonjour": "^3.5.0",
     "p-timeout": "^2.0.1"
